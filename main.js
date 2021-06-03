@@ -33,7 +33,7 @@ function renderSongBody (songs, data) {
     const albumArt = document.createElement('img')
     title.innerHTML = data.trackName
     bandName.innerHTML = data.artistName
-    albumArt.innerHTML = data.artworkUrl100
+    albumArt.src = data.artworkUrl100
     songList.appendChild(title)
     songList.appendChild(bandName)
     songList.appendChild(albumArt)
