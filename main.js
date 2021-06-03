@@ -10,7 +10,7 @@ const songList = document.querySelector("#result-list")
 function getListOfSongs () {
     const search = artistName.value
     // fetch ('https://proxy-itunes-api.glitch.me/search?term=jack+johnson&limit=25')
-    fetch (url + 'term=' + `${search}` + '&limit=10')
+    fetch (url + 'term=' + `${search}` + '&limit=10&entity=song')
     .then (resp => resp.json())
     .then(data =>  { 
         for (let x of data.results) {
