@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: #EFF2F1;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+
+li {
+    list-style-type: none;
+    border: 5px solid #6B9AC4;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* width: 300px; */
+}
+
+li > p {
+    margin: 5px;
+}
+
+li >img {
+    border: 2px solid black;
+}

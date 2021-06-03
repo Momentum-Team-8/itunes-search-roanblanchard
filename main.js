@@ -39,10 +39,10 @@ function renderSongBody (songs, data) {
     bandName.innerHTML = data.artistName
     albumArt.src = data.artworkUrl100
     preview.appendChild(audioSample)
-    songList.appendChild(title)
-    songList.appendChild(bandName)
-    songList.appendChild(albumArt)
-    songList.appendChild(preview)
+    songs.appendChild(title)
+    songs.appendChild(bandName)
+    songs.appendChild(albumArt)
+    songs.appendChild(preview)
 }
 
 form.addEventListener ('submit', event => {
