@@ -31,17 +31,22 @@ function renderSongBody (songs, data) {
     const title = document.createElement('p')
     const bandName = document.createElement('p')
     const albumArt = document.createElement('img')
+    const preview = document.createElement('audio')
+    const audioSample = document.createElement('source')
+    preview.controls = true
+    audioSample.src = data.previewUrl
     title.innerHTML = data.trackName
     bandName.innerHTML = data.artistName
     albumArt.src = data.artworkUrl100
+    preview.appendChild(audioSample)
     songList.appendChild(title)
     songList.appendChild(bandName)
     songList.appendChild(albumArt)
+    songList.appendChild(preview)
 }
 
 form.addEventListener ('submit', event => {
     event.preventDefault()
-    console.log(artistName.value)
     getListOfSongs()
     
 })
