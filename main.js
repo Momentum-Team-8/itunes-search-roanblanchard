@@ -9,7 +9,6 @@ const songList = document.querySelector("#result-list")
 // this block handles rendering the songs to the screen
 function getListOfSongs () {
     const search = artistName.value
-    // fetch ('https://proxy-itunes-api.glitch.me/search?term=jack+johnson&limit=25')
     fetch (url + 'term=' + `${search}` + '&limit=12&entity=song')
     .then (resp => resp.json())
     .then(data =>  { 
@@ -54,3 +53,10 @@ form.addEventListener ('submit', event => {
     
 })
 
+
+// clears the page for a new search
+const clear = document.querySelector('#clear-button')
+clear.addEventListener ('click', event => {
+    event.preventDefault()
+    location.reload()
+})
