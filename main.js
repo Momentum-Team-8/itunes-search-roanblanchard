@@ -10,7 +10,7 @@ const songList = document.querySelector("#result-list")
 function getListOfSongs () {
     const search = artistName.value
     // fetch ('https://proxy-itunes-api.glitch.me/search?term=jack+johnson&limit=25')
-    fetch (url + 'term=' + `${search}` + '&limit=10&entity=song')
+    fetch (url + 'term=' + `${search}` + '&limit=12&entity=song')
     .then (resp => resp.json())
     .then(data =>  { 
         for (let x of data.results) {
@@ -45,6 +45,9 @@ function renderSongBody (songs, data) {
     songs.appendChild(preview)
 }
 
+
+
+// listens for the submit button to be pressed
 form.addEventListener ('submit', event => {
     event.preventDefault()
     getListOfSongs()
