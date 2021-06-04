@@ -83,9 +83,6 @@ li {
     margin-left: 0;
     width: 450px;
     backdrop-filter: blur(8px);
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* width: 300px; */
 }
 
 li > p {
@@ -99,6 +96,7 @@ p:nth-child(1) {
 
 li >img {
     border: 2px solid black;
+    margin-right: 10px;
 }
 
 .search-results {
